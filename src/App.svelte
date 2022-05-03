@@ -1,6 +1,6 @@
 <script lang="ts">
   import { mapInput } from "./helpers";
-  import GithubLogo from "./github.svg";
+  import GithubLogo from "./facebook.svg";
 
   const handleClick = (style) => {
     const e = document.querySelector<HTMLElement>(`[data-style="${style}"]`);
@@ -31,7 +31,7 @@
 <footer>
   <a
     href="#"
-    title="Source on Github"
+    title="Source on Facebook"
   >
     <GithubLogo class="logo" />
   </a>
