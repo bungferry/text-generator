@@ -15,7 +15,7 @@
 <input autofocus bind:value={text} placeholder="ketik sesuatu..." />
 
 <main>
-  <small>Klik/ketuk untuk menyalin teks.</small>
+  <small>Klik/ketuk untuk menyalin hasil teks.</small>
   {#each Object.keys(styles) as style}
     <p on:click={() => handleClick(style)}>
       <small>{style}</small>
