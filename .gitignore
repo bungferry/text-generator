@@ -1,0 +1,11 @@
+.backup
+.cache
+.DS_Store
+.env
+*.config.json
+dist*
+node_modules
+yarn-*
+public/build
+public/index.html
+public/build/bundle.*

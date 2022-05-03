@@ -1,0 +1,40 @@
+version: 2.1
+
+orbs:
+  aws-s3: circleci/aws-s3@2.0.0
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:17.9.0
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v2-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-
+
+      - run:
+          name: Installing dependencies
+          command: yarn
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v2-dependencies-{{ checksum "package.json" }}
+
+      - run:
+          name: Building
+          environment:
+            PUBLIC_URL: /text-generator
+          command: yarn build
+
+      - aws-s3/sync:
+          aws-region: AWS_DEFAULT_REGION
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+          from: public/
+          to: "s3://public.nikhil.io/text-generator/"
+          arguments: |
+            --delete
