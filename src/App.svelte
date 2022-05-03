@@ -12,10 +12,10 @@
   $: show = text.length === 0 ? false : true;
 </script>
 
-<input autofocus bind:value={text} placeholder="type something..." />
+<input autofocus bind:value={text} placeholder="ketik sesuatu..." />
 
 <main>
-  <small>Click/tap to copy</small>
+  <small>Klik/ketuk untuk menyalin teks.</small>
   {#each Object.keys(styles) as style}
     <p on:click={() => handleClick(style)}>
       <small>{style}</small>
