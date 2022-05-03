@@ -30,7 +30,7 @@
 
 <footer>
   <a
-    href="https://github.com/afreeorange/stylish-text-generator"
+    href="#"
     title="Source on Github"
   >
     <GithubLogo class="logo" />
