@@ -30,7 +30,7 @@
 
 <footer>
   <a
-    href="#"
+    href="https://www.facebook.com/bungferry.wa"
     title="Source on Facebook"
   >
     <GithubLogo class="logo" />
