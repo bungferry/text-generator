@@ -26,6 +26,7 @@
       {/if}
     </p>
   {/each}
+<p>Donate; <a href="https://saweria.co/bungferry">Sharing is beautiful, no matter how many rupiahs it is important to be sincere.</a></p>
 </main>
 
 <footer>
