@@ -15,7 +15,7 @@
 <input autofocus bind:value={text} placeholder="ketik sesuatu..." />
 
 <main>
-  <small>Klik/ketuk untuk menyalin hasil teks.</small>
+  <small>Donate; <a href="https://saweria.co/bungferry">Sharing is beautiful, no matter how many rupiahs it is important to be sincere.</a></small>
   {#each Object.keys(styles) as style}
     <p on:click={() => handleClick(style)}>
       <small>{style}</small>
